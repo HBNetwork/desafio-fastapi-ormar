@@ -3,7 +3,7 @@ from asyncio.log import logger
 import os
 from fastapi import FastAPI
 
-from api.rotas import router
+from api.rotas import root_router
 
 from api.config import database
 
@@ -24,4 +24,4 @@ if os.environ.get("TEST_DATABASE") != "true":
 def get_root():
     return {"mensagem": "api"}
 
-app.include_router(router, prefix="")
+app.include_router(root_router, prefix="")

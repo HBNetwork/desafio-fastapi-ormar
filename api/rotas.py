@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from api.controllers import usuarios_controller as usuarios
+from api.controllers.usuarios_controller import user_router
 
-router = APIRouter()
+root_router = APIRouter()
 
-router.include_router(usuarios.router, prefix='/usuarios', tags=['Usuarios'])
+root_router.include_router(user_router, prefix='/usuarios', tags=['Usuarios'])
