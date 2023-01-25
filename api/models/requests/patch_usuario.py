@@ -1,5 +1,7 @@
-from typing import List, Optional
+from typing import Optional
+
 from pydantic import BaseModel
+
 
 class UsuarioUpdate(BaseModel):
     cpf: Optional[str]

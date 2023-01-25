@@ -4,5 +4,5 @@ def create_usuario_valido():
         "cpf": "string",
         "nome": "string",
         "email": "string",
-        "telefone":"string",
+        "telefone": "string",
     }

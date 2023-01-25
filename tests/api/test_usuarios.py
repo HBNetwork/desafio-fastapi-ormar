@@ -1,9 +1,11 @@
-from fastapi.testclient import TestClient
+import asyncio
+
 import ormar
 import pytest
+from fastapi.testclient import TestClient
+
 from api.models.usuario import Usuario
 from tests.utils.usuarios import create_usuario_valido
-import asyncio
 
 
 def test_lista_todos_os_usuarios(client: TestClient) -> None:
@@ -18,12 +20,14 @@ def test_lista_todos_os_usuarios(client: TestClient) -> None:
     assert response.status_code == 200
     assert len(content) == 1
 
+
 def test_cria_usuario(client: TestClient) -> None:
     body = create_usuario_valido()
     response = client.post("/usuarios/", json=body)
     content = response.json()
     assert response.status_code == 200
     assert content["cpf"] == body["cpf"]
+
 
 def test_obtem_um_usuario_por_id(client: TestClient) -> None:
     atributos = create_usuario_valido()
@@ -36,11 +40,13 @@ def test_obtem_um_usuario_por_id(client: TestClient) -> None:
     assert response.status_code == 200
     assert content["cpf"] == usuario.cpf
 
+
 def test_obtem_usuario_inexistente_por_id(client: TestClient) -> None:
     response = client.get("/usuarios/1")
     content = response.json()
     assert response.status_code == 404
     assert content["detail"] == "Entidade não encontrada"
+
 
 def test_update_usuario_existente(client: TestClient) -> None:
     atributos = create_usuario_valido()
@@ -70,6 +76,7 @@ def test_update_usuario_inexistente(client: TestClient) -> None:
 
     assert response.status_code == 404
     assert content["detail"] == "Entidade não encontrada"
+
 
 def test_delete_usuario_existente(client: TestClient) -> None:
     atributos = create_usuario_valido()
