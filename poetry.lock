@@ -269,6 +269,14 @@ tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "python-decouple"
+version = "3.7"
+description = "Strict separation of settings from code."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "rfc3986"
 version = "1.5.0"
 description = "Validating URI References per RFC 3986"
@@ -370,7 +378,7 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "047af14bcce5942a8566bbe734c352bd6fcf30612a680f71308e29b8571b61c6"
+content-hash = "9ec0ad7ee2d41eb7e0a904a02b6ff2bdd2ee4caadf422220a8d9c8184ce7b517"
 
 [metadata.files]
 aiosqlite = []
@@ -396,6 +404,7 @@ pluggy = [
 ]
 pydantic = []
 pytest = []
+python-decouple = []
 rfc3986 = []
 sniffio = []
 sqlalchemy = []
