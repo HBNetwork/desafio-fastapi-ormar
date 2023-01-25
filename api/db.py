@@ -1,8 +1,8 @@
 import databases
 import sqlalchemy
 
-from api.config import DATABASE_URL, TEST_DATABASE
+from api.config import DATABASE_URL, FORCE_ROLLBACK
 
 
-database = databases.Database(DATABASE_URL, force_rollback=TEST_DATABASE)
+database = databases.Database(DATABASE_URL, force_rollback=FORCE_ROLLBACK)
 metadata = sqlalchemy.MetaData()
