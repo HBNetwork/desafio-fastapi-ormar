@@ -1,6 +1,6 @@
 import ormar
 
-from api.config import database, metadata
+from api.db import database, metadata
 
 
 class Usuario(ormar.Model):

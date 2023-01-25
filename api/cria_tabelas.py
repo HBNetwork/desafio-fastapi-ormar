@@ -1,6 +1,7 @@
 import sqlalchemy
 
-from api.config import DATABASE_URL, metadata
+from api.config import DATABASE_URL
+from api.db import metadata
 
 
 def configurar_banco(database_url=DATABASE_URL):

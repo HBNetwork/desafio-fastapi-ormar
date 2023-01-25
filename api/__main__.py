@@ -2,13 +2,12 @@ import asyncio
 import os
 from asyncio.log import logger
 
-from fastapi import FastAPI
 
-from api.config import database
+from fastapi import FastAPI
 from api.rotas import root_router
+from api.db import database, metadata
 
 app = FastAPI()
-
 
 async def connect_db():
     try:
