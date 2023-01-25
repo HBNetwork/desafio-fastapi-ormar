@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 import ormar
 import pytest
-from models.usuario import Usuario
+from api.models.usuario import Usuario
 from tests.utils.usuarios import create_usuario_valido
 import asyncio
 

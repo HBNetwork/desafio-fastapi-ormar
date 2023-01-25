@@ -15,6 +15,8 @@ DATABASE_URL = get_db_uri(
     db="desafio_cadhab",
 )
 
+DATABASE_URL = "sqlite:///db.sqlite"
+
 if os.environ.get("TEST_DATABASE") == "true":
     DATABASE_URL = 'sqlite:///testedb.sqlite'
 

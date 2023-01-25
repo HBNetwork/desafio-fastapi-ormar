@@ -2,7 +2,7 @@ import ormar
 import re
 from pydantic import validator
 from sqlalchemy.sql.expression import table
-from config import database, metadata
+from api.config import database, metadata
 
 class Usuario(ormar.Model):
     class Meta:

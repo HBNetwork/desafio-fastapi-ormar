@@ -2,8 +2,8 @@ from databases.core import DatabaseURL
 import sqlalchemy
 from sqlalchemy import engine
 
-from config import DATABASE_URL, metadata
-import models.import_models
+from api.config import DATABASE_URL, metadata
+import api.models.import_models
 
 def configurar_banco(database_url = DATABASE_URL):
     engine = sqlalchemy.create_engine(database_url)

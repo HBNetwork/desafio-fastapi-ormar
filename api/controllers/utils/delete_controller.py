@@ -1,7 +1,7 @@
 from functools import wraps
 import ormar
 
-from controllers.utils.entidade_nao_encontrada import entidade_nao_encontrada
+from api.controllers.utils.entidade_nao_encontrada import entidade_nao_encontrada
 
 def delete_controller(modelo: ormar.Model):
     def inner(func):

@@ -3,9 +3,9 @@ from asyncio.log import logger
 import os
 from fastapi import FastAPI
 
-from rotas import router
+from api.rotas import router
 
-from config import database
+from api.config import database
 
 app = FastAPI()
 
@@ -25,4 +25,3 @@ def get_root():
     return {"mensagem": "api"}
 
 app.include_router(router, prefix="")
-
